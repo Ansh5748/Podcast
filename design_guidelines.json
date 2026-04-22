@@ -1,0 +1,94 @@
+{
+  "theme": {
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Cinematic Hybrid",
+    "mode": "dark",
+    "description": "A dark, highly technical command-center. The UI recedes into deep void blacks and stark architectural lines, allowing the hyper-realistic fictional content (videos, characters) to act as the primary visual light source. Functional brutalism meets cinematic studio.",
+    "colors": {
+      "background": "#050505",
+      "surface": "#0A0A0A",
+      "surface_hover": "#141414",
+      "border": "rgba(255, 255, 255, 0.1)",
+      "text_primary": "#F5F5F5",
+      "text_secondary": "#8A8A8A",
+      "primary_accent": "#FF3B30",
+      "primary_accent_hover": "#FF574D",
+      "success": "#00FF66",
+      "warning": "#FFCC00"
+    },
+    "typography": {
+      "heading_font": "Chivo",
+      "body_font": "Manrope",
+      "mono_font": "JetBrains Mono",
+      "scales": {
+        "h1": "text-4xl sm:text-5xl tracking-tighter font-black",
+        "h2": "text-2xl sm:text-3xl tracking-tight font-bold",
+        "h3": "text-xl sm:text-2xl tracking-tight font-semibold",
+        "h4": "text-lg font-medium",
+        "body": "text-base leading-relaxed",
+        "small": "text-sm text-[#8A8A8A]",
+        "label": "text-xs tracking-[0.2em] uppercase font-mono text-[#8A8A8A]"
+      }
+    },
+    "surfaces": {
+      "header": "bg-[#050505]/80 backdrop-blur-xl border-b border-white/10 z-50",
+      "card": "bg-[#0A0A0A] border border-white/10 rounded-none",
+      "floating_panel": "bg-[#141414]/90 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]",
+      "inputs": "bg-[#050505] border border-white/10 focus:border-[#FF3B30] focus:ring-1 focus:ring-[#FF3B30]/50 rounded-none text-white transition-colors"
+    }
+  },
+  "layout_strategy": {
+    "general": "The 'Control Room' Grid protocol. Dense, edge-to-edge layouts using collapsible left-sidebars and heavily modular widget zones.",
+    "spacing": "Tight spacing for dashboard widgets (gap-4, p-4), but generous internal padding (p-8) for content viewer panes.",
+    "grid": "grid-cols-1 md:grid-cols-12 gap-0 border-collapse. Utilize 1px white/10 borders on grid children to create a technical skeleton.",
+    "sidebar": "Fixed vertical navigation, tracking active states with a solid #FF3B30 left border indicator and white text.",
+    "main_content": "Split-pane layout. Left: Technical parameter controls (forms, sliders). Right: Immersive cinematic preview canvas."
+  },
+  "components": {
+    "buttons": "Flat, sharp edges (rounded-none). Primary: bg-[#FF3B30] text-white hover:bg-[#FF574D]. Secondary: bg-transparent border border-white/20 hover:bg-white/5. All buttons MUST have data-testid.",
+    "forms": "Use Shadcn customized for dark mode. Remove soft radii (rounded-none). Use JetBrains Mono for data readouts and parameter inputs.",
+    "cards": "Zero shadow by default. Rely on 1px white/10 borders. Hover states trigger a subtle lift and border glow.",
+    "tabs": "Minimalist technical tabs. Active tab has a bright bottom border (#FF3B30) and text-white. Inactive tabs are grayed out.",
+    "sliders": "Essential for AI generation parameters. Thin track with a sharp rectangular thumb.",
+    "status_indicators": "Small glowing dots (e.g., red for recording, green for ready) with accompanying JetBrains Mono labels."
+  },
+  "media": {
+    "images": [
+      {
+        "category": "podcast_studio_bg",
+        "url": "https://images.unsplash.com/photo-1660832459346-d069f58410c1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwzfHxwb2RjYXN0JTIwc3R1ZGlvJTIwbWljcm9waG9uZSUyMGRhcmt8ZW58MHx8fHwxNzc2MjAxMTc2fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark podcast studio microphone setup. Use in the Studio Engine preview."
+      },
+      {
+        "category": "world_generation_preview",
+        "url": "https://images.unsplash.com/photo-1775846103032-fee9b748d0a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwYWxpZW4lMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzc2MjAxMTkwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Fantasy alien landscape. Use as placeholder for the World Engine generated outputs."
+      },
+      {
+        "category": "character_portrait",
+        "url": "https://images.unsplash.com/photo-1770896687186-895de50a4123?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzV8MHwxfHNlYXJjaHwxfHxjaW5lbWF0aWMlMjBwb3J0cmFpdCUyMGRhcmslMjBkcmFtYXRpY3xlbnwwfHx8fDE3NzYyMDExOTB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Dark dramatic portrait. Use as a placeholder for the Character Engine."
+      },
+      {
+        "category": "dashboard_abstract_bg",
+        "url": "https://images.unsplash.com/photo-1720962158789-9389a4f399da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NjZ8MHwxfHNlYXJjaHwxfHxmdXR1cmlzdGljJTIwdGVjaG5vbG9neSUyMGludGVyZmFjZSUyMGRhcmt8ZW58MHx8fHwxNzc2MjAxMTkwfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract control panel background. Use for loading states, empty data views, or login screens."
+      }
+    ]
+  },
+  "motion_and_interactions": {
+    "general": "Micro-interactions focus on precision. Snappy, fast transitions. No bouncy animations.",
+    "hover_states": "Interactive elements must explicitly set hover:text-white. Use subtle background tint shifts.",
+    "loading": "Use technical loaders. Indeterminate linear progress bars (h-1 bg-[#FF3B30] running across the top edge) rather than generic circular spinners."
+  },
+  "instructions_to_main_agent": [
+    "You are building an internal technical dashboard for AI podcast generation. Do NOT build a marketing landing page.",
+    "Implement a persistent left sidebar with navigation for the multi-layered engines: World Engine, Character Engine, Scripts, Studio, Video Generation.",
+    "Ensure global import of fonts 'Chivo', 'Manrope', and 'JetBrains Mono' from Google Fonts.",
+    "Strictly adhere to the dark theme colors. Do NOT use default Tailwind blue. Use #FF3B30 (Signal Red) for primary actions to simulate a recording/studio aesthetic.",
+    "Apply 'Grid Borders' surface strategy: Use border-r and border-b on grid items to expose the layout skeleton.",
+    "Strip Shadcn components of soft radii (use rounded-none) and heavy shadows. Flat and technical.",
+    "Integrate provided images for previews. Use object-cover within sharp-edge containers. Do not use random placeholder services.",
+    "MANDATORY: Add 'data-testid' attributes to EVERY interactive element using role-based kebab-case naming."
+  ]
+}
+
